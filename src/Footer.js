@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div className="footer bg-dark text-white copyright">
       <div>
-        Tibian Library © 2022 - 2023 by christofrancis
+        Tibian Library © 2022 - 2023
         <br />
         <a target="blank" href="https://www.tibia.com/">
           Tibia
