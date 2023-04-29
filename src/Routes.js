@@ -26,7 +26,7 @@ import AddDocAndPaper from "./DocAndPaper/AddDocAndPaper";
 import SingleDocAndPaper from "./DocAndPaper/SingleDocAndPaper";
 import EditDocAndPaper from "./DocAndPaper/EditDocAndPaper";
 
-import Contact from "./Contact";
+import Discord from "./Discord";
 
 const Main = () => {
   return (
@@ -34,7 +34,7 @@ const Main = () => {
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/discord" element={<Discord />} />
         <Route path="/books" element={<Books />} />
         <Route
           path="/add-book"

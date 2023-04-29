@@ -72,12 +72,12 @@ const Navigation = () => {
             </Nav.Link>
             <Nav.Link
               as={Link}
-              to="/contact"
+              to="/discord"
               onClick={() => {
                 window.dataLayer.push({ event: "button-click" });
               }}
             >
-              Contact
+              Discord
             </Nav.Link>
             {getAdminUser() && (
               <Nav.Link

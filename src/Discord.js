@@ -2,7 +2,7 @@ import React from "react";
 import Navigation from "./Navigation";
 import Footer from "./Footer";
 
-const Contact = () => {
+const Discord = () => {
   return (
     <div className="container">
       <Navigation />
@@ -27,4 +27,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Discord;
