@@ -25,7 +25,6 @@ const AddBook = () => {
     finder: "",
     keywords: "",
     map_pin: "",
-    screenshot: "",
     cover: "",
   });
 
@@ -33,8 +32,7 @@ const AddBook = () => {
   const [content, setContent] = useState("");
 
   //destructuring values from state
-  const { screenshot, title, cover, location, finder, keywords, map_pin } =
-    state;
+  const { title, cover, location, finder, keywords, map_pin } = state;
 
   //onChange event handler
   const handleChange = (title) => (event) => {
@@ -45,7 +43,6 @@ const AddBook = () => {
     event.preventDefault();
     axios
       .post(`${process.env.REACT_APP_API}/book`, {
-        screenshot,
         cover,
         title,
         location,
@@ -59,7 +56,6 @@ const AddBook = () => {
           ...state,
           title: "",
           location: "",
-          screenshot: "",
           finder: "",
           keywords: "",
           map_pin: "",
@@ -146,16 +142,6 @@ const AddBook = () => {
             </div>
 
             <div className="div-middle">
-              <div className="form-group">
-                <label className="text-muted">Screenshot URL</label>
-                <input
-                  onChange={handleChange("screenshot")}
-                  value={screenshot}
-                  className="form-control"
-                  type="text"
-                  required
-                />
-              </div>
               <div className="form-group">
                 <label className="text-muted">Map pin URL</label>
                 <input

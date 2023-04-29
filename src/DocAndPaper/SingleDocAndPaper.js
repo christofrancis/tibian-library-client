@@ -117,19 +117,26 @@ const SingleDocAndPaper = () => {
             )}
           </tr>
           <tr>
-            <td colSpan={2}>
+            <td className="map-pin-cont">
+              <span>Map pin:</span>{" "}
+              <a
+                className="font-weight-bold"
+                target="blank"
+                href={doc_and_paper.map_pin}
+              >
+                LINK
+              </a>
+            </td>
+            <td>
               <span className="font-weight-bold">Location:</span>{" "}
               {doc_and_paper.location}
             </td>
           </tr>
-          {/* <tr>
-            <td colSpan={2}>
-              <span className="font-weight-bold">Location:</span>{" "}
-              {doc_and_paper.location}
-            </td>
-          </tr> */}
-
           <tr>
+            <td>
+              <span className="font-weight-bold">Date:</span>{" "}
+              {moment(doc_and_paper.createdAt).format("DD-MM-YYYY")}
+            </td>
             <td colSpan={1}>
               <span>Finder:</span>
               <a
@@ -139,34 +146,6 @@ const SingleDocAndPaper = () => {
               >
                 {" "}
                 {doc_and_paper.finder}
-              </a>
-            </td>
-            <td rowSpan={3}>
-              <a target="blank" href={doc_and_paper.screenshot}>
-                <img
-                  className="single-location-image"
-                  src={doc_and_paper.screenshot}
-                  alt=""
-                ></img>
-              </a>
-            </td>
-          </tr>
-          <tr>
-            {/* <td><span className="font-weight-bold">Date:</span>{" "}{moment(doc_and_paper.createdAt).fromNow()}</td> */}
-            <td>
-              <span className="font-weight-bold">Date:</span>{" "}
-              {moment(doc_and_paper.createdAt).format("DD-MM-YYYY")}
-            </td>
-          </tr>
-          <tr>
-            <td className="map-pin-cont">
-              <span>Map pin:</span>{" "}
-              <a
-                className="font-weight-bold"
-                target="blank"
-                href={doc_and_paper.map_pin}
-              >
-                LINK
               </a>
             </td>
           </tr>

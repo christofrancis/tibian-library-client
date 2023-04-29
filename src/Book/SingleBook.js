@@ -111,19 +111,26 @@ const SingleBook = () => {
             )}
           </tr>
           <tr>
-            <td colSpan={2}>
+            <td className="map-pin-cont">
+              <span>Map pin:</span>{" "}
+              <a
+                className="font-weight-bold"
+                target="blank"
+                href={book.map_pin}
+              >
+                LINK
+              </a>
+            </td>
+            <td>
               <span className="font-weight-bold">Location:</span>{" "}
               {book.location}
             </td>
           </tr>
-          {/* <tr>
-            <td colSpan={2}>
-              <span className="font-weight-bold">Location:</span>{" "}
-              {book.location}
-            </td>
-          </tr> */}
-
           <tr>
+            <td>
+              <span className="font-weight-bold">Date:</span>{" "}
+              {moment(book.createdAt).format("DD-MM-YYYY")}
+            </td>
             <td colSpan={1}>
               <span>Finder:</span>
               <a
@@ -133,34 +140,6 @@ const SingleBook = () => {
               >
                 {" "}
                 {book.finder}
-              </a>
-            </td>
-            <td rowSpan={3}>
-              <a target="blank" href={book.screenshot}>
-                <img
-                  className="single-location-image"
-                  src={book.screenshot}
-                  alt=""
-                ></img>
-              </a>
-            </td>
-          </tr>
-          <tr>
-            {/* <td><span className="font-weight-bold">Date:</span>{" "}{moment(book.createdAt).fromNow()}</td> */}
-            <td>
-              <span className="font-weight-bold">Date:</span>{" "}
-              {moment(book.createdAt).format("DD-MM-YYYY")}
-            </td>
-          </tr>
-          <tr>
-            <td className="map-pin-cont">
-              <span>Map pin:</span>{" "}
-              <a
-                className="font-weight-bold"
-                target="blank"
-                href={book.map_pin}
-              >
-                LINK
               </a>
             </td>
           </tr>

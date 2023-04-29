@@ -27,7 +27,6 @@ const EditDocAndPaper = () => {
     finder: "",
     keywords: "",
     map_pin: "",
-    screenshot: "",
     cover: "",
   });
 
@@ -35,7 +34,6 @@ const EditDocAndPaper = () => {
   const [content, setContent] = useState("");
 
   const {
-    screenshot,
     title,
     slug,
     location,
@@ -50,7 +48,6 @@ const EditDocAndPaper = () => {
       .get(`${process.env.REACT_APP_API}/doc-and-paper/${props.slug}`)
       .then((response) => {
         const {
-          screenshot,
           title,
           content,
           map_pin,
@@ -62,7 +59,6 @@ const EditDocAndPaper = () => {
         } = response.data;
         setState({
           ...state,
-          screenshot,
           title,
           slug,
           map_pin,
@@ -90,13 +86,11 @@ const EditDocAndPaper = () => {
         keywords,
         location,
         map_pin,
-        screenshot,
         cover,
       })
       .then((response) => {
         const {
           title,
-          screenshot,
           content,
           slug,
           finder,
@@ -108,7 +102,6 @@ const EditDocAndPaper = () => {
         setState({
           ...state,
           title,
-          screenshot,
           content,
           slug,
           map_pin,
@@ -185,16 +178,6 @@ const EditDocAndPaper = () => {
         </div>
 
         <div className="div-middle">
-          <div className="form-group">
-            <label className="text-muted">Screenshot URL</label>
-            <input
-              onChange={handleChange("screenshot")}
-              value={screenshot}
-              className="form-control"
-              type="text"
-              required
-            />
-          </div>
           <div className="form-group">
             <label className="text-muted">Map pin URL</label>
             <input

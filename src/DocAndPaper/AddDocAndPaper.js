@@ -147,16 +147,6 @@ const AddDocAndPaper = () => {
 
             <div className="div-middle">
               <div className="form-group">
-                <label className="text-muted">Screenshot URL</label>
-                <input
-                  onChange={handleChange("screenshot")}
-                  value={screenshot}
-                  className="form-control"
-                  type="text"
-                  required
-                />
-              </div>
-              <div className="form-group">
                 <label className="text-muted">Map pin URL</label>
                 <input
                   onChange={handleChange("map_pin")}
